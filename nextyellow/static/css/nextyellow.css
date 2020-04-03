@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+/* font-family: 'Noto Sans CJK KR', sans-serif; */
+
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.header > img{
+    width: 170px;
+    margin:2rem;
+    margin-right: 0;
+}
+.header > .title{
+    font-size: 1rem;
+    margin:2rem;
+    margin-right: calc(2rem + 15px);
+    padding-bottom: .5rem;
+    text-align: right;
+    font-weight: bold;
+    color: #4d4d4d;
+    font-family: 'Noto Sans CJK KR', sans-serif; 
+}
+.section{
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    padding: 0 
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+}
+.section1--contents{
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+    padding:1rem 3rem;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+.section1--contents p{
+    font-weight: 600;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+}
+.section1--footer{
+    width: 100%;;
+    position: absolute;
+    top: 80vh;
+    display:flex;
+    justify-content: space-between;
+    padding-top:0;
+    font-size: 5px;
+    padding:0 3rem;
+}
+.section1--footer p {
+    padding-bottom:.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+.section1--footer a {
+    color:#4d4d4d;
+}
+.section1--footer > .sns > p {
+    text-align: right;
+}
+/* .mobile{
+    padding-top: 3rem;
+}
+.pc {
+    display: none;
+} */
+
+@media screen and (min-width: 1024px){
+    /* .pc {
+        display: flex;
+        padding:3rem;
+    }
+    .mobile{
+        display: none;;
+    }
+     */
+
+
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
