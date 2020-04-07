@@ -55,7 +55,7 @@ html{
 }
 .section1--footer{
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 80vh;
     display:flex;
     justify-content: space-between;
@@ -79,6 +79,14 @@ html{
 .pc {
     display: none;
 } 
+
+
+.section1--contents .big-font{
+    font-size: 3rem;
+}
+.select-helper{
+    font-size: 5px;
+}
 
 @media (min-width: 1024px){
     .header-wrap{
@@ -147,8 +155,8 @@ html{
         font-size: 5px;
     }
     .section1--footer{
-        width: 100%;;
-        position: absolute;
+        width: 100%;
+        position: fixed;
         top: 80vh;
         display:flex;
         justify-content: space-between;
