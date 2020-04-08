@@ -38,30 +38,43 @@ html{
     display: flex;
     flex-direction: column;
 }
-
 .section1--contents{
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
-    padding:1rem 3rem;
-    animation: fadein 2s;
-    -moz-animation: fadein 2s; /* Firefox */
-    -webkit-animation: fadein 2s; /* Safari and Chrome */
-    -o-animation: fadein 2s; /* Opera */
+    justify-content: center;
+    align-items: center;
+    margin-top: -3em;
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
+}
+
+.hitcount{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1em;
 }
 .section1--contents p{
     font-weight: 600;
     font-family: 'Noto Sans CJK KR', sans-serif;
-    font-size: 11px;
+    font-size: 1em;
+}
+.section1--contents p:nth-child(4){
+    padding-bottom: 1em;
+}
+.section1--contents p:nth-child(6){
+    padding-bottom: 1em;
 }
 .section1--footer{
     width: 100%;
     position: absolute;
-    top: 80vh;
+    top: 75vh;
     display:flex;
     justify-content: space-between;
     padding-top:0;
-    font-size: 5px;
+    font-size: .7em;
     padding:0 3rem;
 }
 .section1--footer p {
@@ -94,18 +107,12 @@ html{
         align-items: flex-end;
     }
     .header > img{
-        width: 200px;
+        width: 370px;
         margin:3rem;
     }
     .header > .title{
-        font-size: 1.2rem;
+        font-size: 2rem;
         margin:3rem;
-        margin-right: calc(2rem + 15px);
-        padding-bottom: .5rem;
-        text-align: right;
-        font-weight: bold;
-        color: #4d4d4d;
-        font-family: 'Noto Sans CJK KR', sans-serif; 
     }
     .section{
         height: 100vh;
@@ -117,45 +124,33 @@ html{
         display: flex;
         flex-direction: column;
     }
-    .section1--contents{
+    .section1--contents > div{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        margin-top: 120px;
-        margin: auto;
+        justify-content: space-evenly;
+        margin-top: 8em;
         width: 86%;
-        max-width: 980px;
-        animation: fadein 2s;
-        -moz-animation: fadein 2s; /* Firefox */
-        -webkit-animation: fadein 2s; /* Safari and Chrome */
-        -o-animation: fadein 2s; /* Opera */
+        max-width: 960px;
+        animation: fadein 4s;
+        -moz-animation: fadein 4s; /* Firefox */
+        -webkit-animation: fadein 4s; /* Safari and Chrome */
+        -o-animation: fadein 4s; /* Opera */
     }
-    
+    .hitcount{
+        display: flex;
+        justify-content: flex-start;
+    }
     .section1--contents p{
         font-weight: 600;
         font-family: 'Noto Sans CJK KR', sans-serif;
+        font-size: 1.3em;
     }
     .section1--contents .hitcount p{
-        font-size: 1.2rem;
-    }
-    .section1--contents > .sns{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-    }
-    .section1--contents > .sns a{
-        color:black;
-        font-size: 5px;
+        font-size: 1.7em;
     }
     .section1--footer{
-        width: 100%;;
-        position: absolute;
-        top: 80vh;
-        display:flex;
-        justify-content: space-between;
-        padding-top:0;
-        font-size: 5px;
-        padding:0 3rem;
+        align-items: flex-end;
+        font-size: 1em;
     }
     .section1--footer p {
         padding-bottom:.5rem;
@@ -164,19 +159,17 @@ html{
     .section1--footer a {
         color:#4d4d4d;
     }
-    .section1--footer > .sns > p {
-        text-align: right;
+    .credit{
+        display: flex;
+        justify-content: space-between;
+        width: 43%;
     }
+    
    .footer-wrap{
         display: flex;
         justify-content: center;
         align-items: flex-end;
    }
-   .section1--footer .sns {
-       display: flex;
-       justify-content: flex-end;
-       align-items: flex-end;
-    }
    .mobile{
        display: none;
    }
@@ -185,8 +178,9 @@ html{
         padding:3rem;
     }
     .black-arrow{
-        font-size: 1.2rem;;
+        font-size: 1.2rem;
     }
+
 }
 
 @keyframes fadein {
