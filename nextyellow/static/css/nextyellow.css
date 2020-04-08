@@ -52,6 +52,7 @@ html{
 .section1--contents p{
     font-weight: 600;
     font-family: 'Noto Sans CJK KR', sans-serif;
+    font-size: 11px;
 }
 .section1--footer{
     width: 100%;
