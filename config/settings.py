@@ -25,7 +25,7 @@ SECRET_KEY = 'xkv335i4m%gq3o0cc6)&e8gtfijfb&qcsx!jxom*86$ehbu$h#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '192.168.0.6', '13.125.175.52', 'nextyellow.co.kr', 'www.nextyellow.co.kr']
 
 
 # Application definition
