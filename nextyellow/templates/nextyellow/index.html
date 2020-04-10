@@ -7,21 +7,25 @@
     <title>NEXT YELLOW</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="{% static 'css/nextyellow.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/fullpage.js/dist/fullpage.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
   </head>
   <body>
     <div id="app">
-    <div class="header-wrap">
-        <div class="container header">
-            <img class="logo" src="{% static 'img/nextyellow.png' %}">
-            <h1 class="title">
-            여섯 번째 봄
-            </h1>
+        <div class="header-wrap">
+            <div class="container header">
+                <img class="logo" src="{% static 'img/nextyellow.png' %}">
+                <h1 class="title">
+                여섯 번째 봄
+                </h1>
+            </div>
         </div>
-    </div>
-    <section class="section section1">
+    <full-page :options="options" id="fullpage" ref="fullpage">
 
+    
+    <section class="section section1">
         <div class="section1--contents">
                 <div>
                     <div class="hitcount">
@@ -44,152 +48,141 @@
                 </div>
 
         </div>
- 
-        <div class="footer-wrap">
-        <div class="container section1--footer">
-            <div class="credit">
-                <p><a href="http://416family.org/">4.16세월호참사가족협의회</a></p>
-                <p><a href="http://416ansan.com/">4.16안산시민연대</a></p>
-                <p><a href="https://416foundation.org/">4.16재단</a></p>
-            </div>
-            <div class="sns">
-                <p><a href="https://www.facebook.com/nextyellow0416/">FACEBOOK</a></p>
-                <p><a href="https://www.instagram.com/nextyellow/">INSTAGRAM</a></p>
-                <p><a href="http://pf.kakao.com/_pxcPxfxb">KAKAOTALK</a></p>
-                <br>
-                <p>Jellyjang with tnk&mke</p>
-            </div>
-        </div>
-        </div>
         <a class="pc black-arrow" href="#section2"><i class="fas fa-sort-down"></i></a>
-  </section>
-  <section id="section2" class="section section2">
+    </section>
+    <section id="section2" class="section section2" >
 
-    <div class="section2--contents">
-        <div>
+        <div class="section2--contents">
             <div>
-                <div class="big-font">
-                    <p>슬픔 넘어</p>
-                </div>
                 <div>
-                    <div class="dropdown">
-                        <div class="dropdown-trigger">
-                          <button @click="toggle_flag = !toggle_flag" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                            <span>YELLOW ME</span>
-                            <span class="icon is-small">
-                              <i class="fas fa-sort-down" aria-hidden="true"></i>
-                            </span>
-                          </button>
-                          <!-- <button @click="toggle_flag = !toggle_flag" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                            <span>YELLOW ME</span>
-                            <span class="icon is-small">
-                              <i class="fas fa-sort-down" aria-hidden="true"></i>
-                            </span>
-                          </button> -->
-                        </div>
-                        <div v-if="toggle_flag" class="dropdown-menu" id="dropdown-menu3" role="menu">
-                          <div class="dropdown-content">
-                            <div class="dropdown-item">
-                              강한💪🏼
+                    <div class="big-font">
+                        <p>슬픔 넘어</p>
+                    </div>
+                    <div>
+                        <div class="dropdown">
+                            <div class="dropdown-trigger">
+                            <button @click="toggle" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                                <span>YELLOW ME</span>
+                                <span class="icon is-small">
+                                <i class="fas fa-sort-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
                             </div>
-                            <div class="dropdown-item">
-                              반짝거리는✨
+                            <div v-if="toggle_flag" class="dropdown-menu" id="dropdown-menu3" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                강한💪🏼
+                                </div>
+                                <div class="dropdown-item">
+                                반짝거리는✨
+                                </div>
+                                <div class="dropdown-item">
+                                따스한🔥
+                                </div>
+                                <div class="dropdown-item">
+                                희망적인🤩
+                                </div>
+                                <div class="dropdown-item">
+                                싱그러운🌱
+                                </div>
+                                <div class="dropdown-item">
+                                빛나는⭐
+                                </div>
+                                <div class="dropdown-item">
+                                든든한🏋🏻
+                                </div>
+                                <div class="dropdown-item">
+                                햇살같은🌞
+                                </div>
+                                <div class="dropdown-item">
+                                내일의💫
+                                </div>
+                                <div class="dropdown-item">
+                                담담한🌝
+                                </div>
+                                <div class="dropdown-item">
+                                행복한😀
+                                </div>
+                                <div class="dropdown-item">
+                                편한😌
+                                </div>
+                                <div class="dropdown-item">
+                                아름다운🥰
+                                </div>
+                                <div class="dropdown-item">
+                                새로운🐣
+                                </div>
+                                <div class="dropdown-item">
+                                예쁜🌼
+                                </div>
+                                <div class="dropdown-item">
+                                다정한🤗
+                                </div>
+                                <div class="dropdown-item">
+                                한결같은🌳
+                                </div>
+                                <div class="dropdown-item">
+                                고마운🙏🏼
+                                </div>
+                                <div class="dropdown-item">
+                                색다른💐
+                                </div>
+                                <div class="dropdown-item">
+                                옳은👍
+                                </div>
+                                <div class="dropdown-item">
+                                이로운🌾
+                                </div>
+                                <div class="dropdown-item">
+                                모두의🤝
+                                </div>
+                                <div class="dropdown-item">
+                                애틋한🙋🏻‍♀
+                                </div>
+                                <div class="dropdown-item">
+                                친근한🙌🏼
+                                </div>
+                                <div class="dropdown-item">
+                                활기찬🏃
+                                </div>
                             </div>
-                            <div class="dropdown-item">
-                              따스한🔥
                             </div>
-                            <div class="dropdown-item">
-                              희망적인🤩
-                            </div>
-                            <div class="dropdown-item">
-                              싱그러운🌱
-                            </div>
-                            <div class="dropdown-item">
-                              빛나는⭐
-                            </div>
-                            <div class="dropdown-item">
-                              든든한🏋🏻
-                            </div>
-                            <div class="dropdown-item">
-                              햇살같은🌞
-                            </div>
-                            <div class="dropdown-item">
-                              내일의💫
-                            </div>
-                            <div class="dropdown-item">
-                              담담한🌝
-                            </div>
-                            <div class="dropdown-item">
-                              행복한😀
-                            </div>
-                            <div class="dropdown-item">
-                              편한😌
-                            </div>
-                            <div class="dropdown-item">
-                              아름다운🥰
-                            </div>
-                            <div class="dropdown-item">
-                              새로운🐣
-                            </div>
-                            <div class="dropdown-item">
-                              예쁜🌼
-                            </div>
-                            <div class="dropdown-item">
-                              다정한🤗
-                            </div>
-                            <div class="dropdown-item">
-                              한결같은🌳
-                            </div>
-                            <div class="dropdown-item">
-                              고마운🙏🏼
-                            </div>
-                            <div class="dropdown-item">
-                              색다른💐
-                            </div>
-                            <div class="dropdown-item">
-                              옳은👍
-                            </div>
-                            <div class="dropdown-item">
-                              이로운🌾
-                            </div>
-                            <div class="dropdown-item">
-                              모두의🤝
-                            </div>
-                            <div class="dropdown-item">
-                              애틋한🙋🏻‍♀
-                            </div>
-                            <div class="dropdown-item">
-                              친근한🙌🏼
-                            </div>
-                            <div class="dropdown-item">
-                              활기찬🏃
-                            </div>
-                          </div>
                         </div>
                     </div>
+                    <div class="big-font">
+                        <p>노랑</p>
+                    </div>
                 </div>
-                <div class="big-font">
-                    <p>노랑</p>
+                <div class="select-helper">
+                    <p>당신은 슬픔 넘어 어떤 노랑을 바라는지 궁금합니다.</p>
+                    <p>빈 칸에 당신이 바라는 긍정의 노랑을 골라주세요</p>
+                    <p>슬픔 넘어 당신이 바라는 긍정의 노랑 한 문장이 완성됩니다.</p>
+                    <p>당신의 문장을 캡쳐하여 곳곳에 공유해주세요.</p>
+                    <p>#nextyellow @nextyellow</p>
                 </div>
             </div>
-            <div class="select-helper">
-                <p>당신은 슬픔 넘어 어떤 노랑을 바라는지 궁금합니다.</p>
-                <p>빈 칸에 당신이 바라는 긍정의 노랑을 골라주세요</p>
-                <p>슬픔 넘어 당신이 바라는 긍정의 노랑 한 문장이 완성됩니다.</p>
-                <p>당신의 문장을 캡쳐하여 곳곳에 공유해주세요.</p>
-                <br>
-                <br>
-                <p>#nextyellow @nextyellow</p>
-            </div>
+            <a class="pc black-arrow" href="#section3">&#x25BC;</a>
+    </section>
+    <section id="section3" class="section section3">
+        <div id="instagram">
         </div>
-        <a class="pc black-arrow" href="#section3">&#x25BC;</a>
-</section>
-<section id="section3" class="section section3">
-  <div id="instagram">
-
-  </div>
-  
-</section>
+    </section>
+    </full-page>
+    <div class="footer-wrap">
+    <div class="container section1--footer">
+        <div class="credit">
+            <p><a href="http://416family.org/">4.16세월호참사가족협의회</a></p>
+            <p><a href="http://416ansan.com/">4.16안산시민연대</a></p>
+            <p><a href="https://416foundation.org/">4.16재단</a></p>
+        </div>
+        <div class="sns">
+            <p><a href="https://www.facebook.com/nextyellow0416/">FACEBOOK</a></p>
+            <p><a href="https://www.instagram.com/nextyellow/">INSTAGRAM</a></p>
+            <p><a href="http://pf.kakao.com/_pxcPxfxb">KAKAOTALK</a></p>
+            <p>Jellyjang with tnk&mke</p>
+        </div>
+    </div>
+    </div>
 </div>
 <!-- 
   <script>
@@ -212,6 +205,7 @@
         })
 })
   </script> -->
+
 <script>
     var vm =new Vue({
     el: '#app',
@@ -219,11 +213,25 @@
     data() {
         return {
             toggle_flag : false,
+            options: {
+                navigation: false,
+                // scrollOverflow: true,
+                normalScrollElements: '.dropdown-menu'
+            }
             }
     },
     methods:{
+        toggle : function() {
+            if (this.toggle_flag == false){
+                fullpage_api.setAllowScrolling(false)
+            }
+            else{
+                fullpage_api.setAllowScrolling(true)
+            }
+            this.toggle_flag = !this.toggle_flag
+        }
     }
 })
-</script>  
+</script> 
 </body>
 </html>

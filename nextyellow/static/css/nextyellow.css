@@ -15,6 +15,7 @@ html{
 .header{
     width: 100%;
     position: fixed;
+    z-index: 99;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -75,7 +76,7 @@ html{
 .section1--footer{
     width: 100%;
     position: fixed;
-    top: 75vh;
+    top: 70vh;
     display:flex;
     justify-content: space-between;
     padding-top:0;
@@ -91,6 +92,9 @@ html{
 }
 .section1--footer > .sns > p {
     text-align: right;
+}
+.section1--footer > .sns > p:nth-child(4){
+    padding-top:1em;
 }
 .mobile{
     display: flex;
@@ -121,10 +125,16 @@ html{
 }
 
 .section2--contents .big-font{
-    font-size: 3em;
+    font-size: 2em;
 }
 .section2--contents .select-helper{
-    font-size: .3em;
+    font-size: .7em;
+}
+.section2--contents .select-helper p:nth-child(1){
+    padding-top:1em;
+}
+.section2--contents .select-helper p:nth-child(5){
+    padding-top:1em;
 }
 
 .section2--contents .dropdown .button {
