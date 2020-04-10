@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="{% static 'css/nextyellow.css' %}">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </head>
   <body>
+    <div id="app">
     <div class="header-wrap">
         <div class="container header">
             <img class="logo" src="{% static 'img/nextyellow.png' %}">
@@ -58,12 +60,137 @@
                 <p>Jellyjang with tnk&mke</p>
             </div>
         </div>
-        <p class="pc black-arrow">&#x25BC;</p>
         </div>
+        <a class="pc black-arrow" href="#section2"><i class="fas fa-sort-down"></i></a>
   </section>
+  <section id="section2" class="section section2">
+
+    <div class="section2--contents">
+        <div>
+            <div>
+                <div class="big-font">
+                    <p>슬픔 넘어</p>
+                </div>
+                <div>
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                          <button @click="toggle_flag = !toggle_flag" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                            <span>YELLOW ME</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-sort-down" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                          <!-- <button @click="toggle_flag = !toggle_flag" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                            <span>YELLOW ME</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-sort-down" aria-hidden="true"></i>
+                            </span>
+                          </button> -->
+                        </div>
+                        <div v-if="toggle_flag" class="dropdown-menu" id="dropdown-menu3" role="menu">
+                          <div class="dropdown-content">
+                            <div class="dropdown-item">
+                              강한💪🏼
+                            </div>
+                            <div class="dropdown-item">
+                              반짝거리는✨
+                            </div>
+                            <div class="dropdown-item">
+                              따스한🔥
+                            </div>
+                            <div class="dropdown-item">
+                              희망적인🤩
+                            </div>
+                            <div class="dropdown-item">
+                              싱그러운🌱
+                            </div>
+                            <div class="dropdown-item">
+                              빛나는⭐
+                            </div>
+                            <div class="dropdown-item">
+                              든든한🏋🏻
+                            </div>
+                            <div class="dropdown-item">
+                              햇살같은🌞
+                            </div>
+                            <div class="dropdown-item">
+                              내일의💫
+                            </div>
+                            <div class="dropdown-item">
+                              담담한🌝
+                            </div>
+                            <div class="dropdown-item">
+                              행복한😀
+                            </div>
+                            <div class="dropdown-item">
+                              편한😌
+                            </div>
+                            <div class="dropdown-item">
+                              아름다운🥰
+                            </div>
+                            <div class="dropdown-item">
+                              새로운🐣
+                            </div>
+                            <div class="dropdown-item">
+                              예쁜🌼
+                            </div>
+                            <div class="dropdown-item">
+                              다정한🤗
+                            </div>
+                            <div class="dropdown-item">
+                              한결같은🌳
+                            </div>
+                            <div class="dropdown-item">
+                              고마운🙏🏼
+                            </div>
+                            <div class="dropdown-item">
+                              색다른💐
+                            </div>
+                            <div class="dropdown-item">
+                              옳은👍
+                            </div>
+                            <div class="dropdown-item">
+                              이로운🌾
+                            </div>
+                            <div class="dropdown-item">
+                              모두의🤝
+                            </div>
+                            <div class="dropdown-item">
+                              애틋한🙋🏻‍♀
+                            </div>
+                            <div class="dropdown-item">
+                              친근한🙌🏼
+                            </div>
+                            <div class="dropdown-item">
+                              활기찬🏃
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="big-font">
+                    <p>노랑</p>
+                </div>
+            </div>
+            <div class="select-helper">
+                <p>당신은 슬픔 넘어 어떤 노랑을 바라는지 궁금합니다.</p>
+                <p>빈 칸에 당신이 바라는 긍정의 노랑을 골라주세요</p>
+                <p>슬픔 넘어 당신이 바라는 긍정의 노랑 한 문장이 완성됩니다.</p>
+                <p>당신의 문장을 캡쳐하여 곳곳에 공유해주세요.</p>
+                <br>
+                <br>
+                <p>#nextyellow @nextyellow</p>
+            </div>
+        </div>
+        <a class="pc black-arrow" href="#section3">&#x25BC;</a>
+</section>
+<section id="section3" class="section section3">
   <div id="instagram">
 
   </div>
+  
+</section>
+</div>
 <!-- 
   <script>
     const wrapper = document.getElementById("instagram");
@@ -85,5 +212,18 @@
         })
 })
   </script> -->
-  </body>
+<script>
+    var vm =new Vue({
+    el: '#app',
+    delimiters: ['${', '}'],
+    data() {
+        return {
+            toggle_flag : false,
+            }
+    },
+    methods:{
+    }
+})
+</script>  
+</body>
 </html>
