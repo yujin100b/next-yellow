@@ -168,6 +168,16 @@
     </section>
     <section id="section3" class="section section3">
         <div id="instagram">
+            <div>
+                <img v-for="(item,index) in media" v-bind:key="index" v-bind:src="item['node']['display_url']">
+            </div>
+            <h4>#nextyellow</h4>
+            <div class="insta-text">
+                <p>일상의 모든 노랑 사진을 인스타그램에 태그하여 공유해주세요.</p>
+                <p>봄이 지나도, 만나지 않고도 우리는 마음을 모을 수 있습니다.</p>
+                <p>더 많은 노랑이 공유될 수록</p>
+                <p>노랑은 슬픔 넘어 긍정의 상징이 됩니다. </p>
+            </div>
         </div>
     </section>
     </full-page>
@@ -196,27 +206,7 @@
         <button @click="initial">Close</button>
     </div>
 </div>
-<!-- 
-  <script>
-    const wrapper = document.getElementById("instagram");
-    fetch("https://www.instagram.com/nextyellow/")
-    .then(a => {
-        return a.text();
-    }).then(a => {
-        const media = JSON.parse(a.slice(a.indexOf("edge_owner_to_timeline_media") + 30, a.indexOf("edge_saved_media") - 2));
-        media.edges.forEach(m => {
-            const node = m.node,
-                a = document.createElement("div"),
-                img = document.createElement("img");
-            
-            // a.target="_blank",
-            // a.href = `https://www.instagram.com/p/${node.shortcode}/`,
-            img.src = node.display_url,
-            a.append(img),
-            wrapper.append(a)
-        })
-})
-  </script> -->
+
 
 <script>
     var vm =new Vue({
@@ -235,7 +225,11 @@
             message: '',
             imgindex: 0,
             imgtoggle: false,
+            media: ''
             }
+    },
+    mounted(){
+        this.instagram()
     },
     methods:{
         initial: function () {
@@ -276,6 +270,27 @@
                 }
             })
             fullpage_api.setAllowScrolling(false)
+        },
+        instagram: function(){
+            fetch("https://www.instagram.com/nextyellow/")
+            .then(a => {
+                return a.text();
+            }).then(a => {
+                const media = JSON.parse(a.slice(a.indexOf("edge_owner_to_timeline_media") + 30, a.indexOf("edge_saved_media") - 2));
+                console.log(media)
+                this.media = media.edges
+                // media.edges.forEach(m => {
+                //     const node = m.node,
+                //         a = document.createElement("div"),
+                //         img = document.createElement("img");
+                    
+                //     // a.target="_blank",
+                //     // a.href = `https://www.instagram.com/p/${node.shortcode}/`,
+                //     img.src = node.display_url,
+                //     a.append(img),
+                //     wrapper.append(a)
+                // })
+        })
         }
     }
 })

@@ -220,7 +220,34 @@ div.dropdown-item:hover{
 .pc-text{
     display: none;
 }
-
+#instagram {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: -1em;
+}
+#instagram > div {
+    width: 80%;
+    margin: 0 auto;
+}
+#instagram h4 {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 700;
+}
+#instagram img{
+    float: left;
+    width: 23%;
+    height: 69px;
+    margin: 1%;
+}
+#instagram .insta-text{
+    font-size: .7em;
+    text-align: center;
+    padding-bottom: 3em;
+}
 @media (min-width: 1024px){
     .header-wrap{
         display: flex;
