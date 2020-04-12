@@ -226,7 +226,7 @@ div.dropdown-item:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: -1em;
+    margin-top: -1em;
 }
 #instagram > div {
     width: 80%;
