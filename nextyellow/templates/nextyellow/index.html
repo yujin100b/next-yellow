@@ -54,12 +54,12 @@
 
         <div v-show="index == 1" class="section2--contents">
             <div>
-                <div>
+                <div class="select-main-wrap">
                     <div class="big-font">
                         <p>슬픔 넘어</p>
                     </div>
                     <div>
-                        <div class="dropdown">
+                        <div class="dropdown" v-bind:class="message != '' ? 'selected-dropdown-desktop' : ''">
                             <div class="dropdown-trigger">
                             <button @click="toggle" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
                                 <span v-if="message == ''">YELLOW ME</span>
@@ -155,12 +155,14 @@
                         <p>노랑</p>
                     </div>
                 </div>
+                <div class="select-helper-wrap">
                 <div class="select-helper">
                     <p>당신은 슬픔 넘어 어떤 노랑을 바라는지 궁금합니다.</p>
                     <p>빈 칸에 당신이 바라는 긍정의 노랑을 골라주세요</p>
                     <p>슬픔 넘어 당신이 바라는 긍정의 노랑 한 문장이 완성됩니다.</p>
                     <p>당신의 문장을 캡쳐하여 곳곳에 공유해주세요.</p>
                     <p>#nextyellow @nextyellow</p>
+                </div>
                 </div>
             </div>
     </section>
@@ -188,7 +190,8 @@
 
 
     <div v-if="imgtoggle" class="img-modal">
-        <p>이미지를 길게 누르시면 저장할 수 있습니다.</p>
+        <p class="mobile-text">이미지를 길게 누르시면 저장할 수 있습니다.</p>
+        <p class="pc-text">이미지를 마우스 오른쪽 클릭으로 저장할 수 있습니다.</p>
             <img v-bind:src="'/static/img/모바일1_최종_' + imgindex +'.jpg'">
         <button @click="initial">Close</button>
     </div>
