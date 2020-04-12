@@ -48,11 +48,11 @@
                 </div>
 
         </div>
-        <a class="pc black-arrow" href="#section2"><i class="fas fa-sort-down"></i></a>
+        
     </section>
     <section id="section2" class="section section2" >
 
-        <div class="section2--contents">
+        <div v-show="index == 1" class="section2--contents">
             <div>
                 <div>
                     <div class="big-font">
@@ -62,94 +62,96 @@
                         <div class="dropdown">
                             <div class="dropdown-trigger">
                             <button @click="toggle" class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                                <span>YELLOW ME</span>
+                                <span v-if="message == ''">YELLOW ME</span>
+                                <span v-else class="selected">${ message }</span>
                                 <span class="icon is-small">
                                 <i class="fas fa-sort-down" aria-hidden="true"></i>
                                 </span>
                             </button>
+                            <span v-if="message != ''" @click="send" class="selected-btn">OK</span>
                             </div>
                             <div v-if="toggle_flag" class="dropdown-menu" id="dropdown-menu3" role="menu">
-                            <div class="dropdown-content">
-                                <div class="dropdown-item">
+                            <div class="dropdown-content" v-bind:class="message != '' ? 'selected-dropdown' : ''">
+                                <div v-bind:value="1" @click="click" class="dropdown-item">
                                 강한💪🏼
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="2" @click="click" class="dropdown-item">
                                 반짝거리는✨
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="3" @click="click" class="dropdown-item">
                                 따스한🔥
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="4" @click="click" class="dropdown-item">
                                 희망적인🤩
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="5" @click="click" class="dropdown-item">
                                 싱그러운🌱
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="6" @click="click" class="dropdown-item">
                                 빛나는⭐
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="7" @click="click" class="dropdown-item">
                                 든든한🏋🏻
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="8" @click="click" class="dropdown-item">
                                 햇살같은🌞
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="9" @click="click" class="dropdown-item">
                                 내일의💫
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="10" @click="click" class="dropdown-item">
                                 담담한🌝
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="11" @click="click" class="dropdown-item">
                                 행복한😀
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="12" @click="click" class="dropdown-item">
                                 편한😌
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="13" @click="click" class="dropdown-item">
                                 아름다운🥰
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="14" @click="click" class="dropdown-item">
                                 새로운🐣
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="15" @click="click" class="dropdown-item">
                                 예쁜🌼
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="16" @click="click" class="dropdown-item">
                                 다정한🤗
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="17" @click="click" class="dropdown-item">
                                 한결같은🌳
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="18" @click="click" class="dropdown-item">
                                 고마운🙏🏼
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="19" @click="click" class="dropdown-item">
                                 색다른💐
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="20" @click="click" class="dropdown-item">
                                 옳은👍
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="21" @click="click" class="dropdown-item">
                                 이로운🌾
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="22" @click="click" class="dropdown-item">
                                 모두의🤝
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="23" @click="click" class="dropdown-item">
                                 애틋한🙋🏻‍♀
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="24" @click="click" class="dropdown-item">
                                 친근한🙌🏼
                                 </div>
-                                <div class="dropdown-item">
+                                <div v-bind:value="25" @click="click" class="dropdown-item">
                                 활기찬🏃
                                 </div>
                             </div>
                             </div>
                         </div>
                     </div>
-                    <div class="big-font">
+                    <div class="big-font" v-bind:class="message != '' ? 'selected-big-font' : ''">
                         <p>노랑</p>
                     </div>
                 </div>
@@ -161,7 +163,6 @@
                     <p>#nextyellow @nextyellow</p>
                 </div>
             </div>
-            <a class="pc black-arrow" href="#section3">&#x25BC;</a>
     </section>
     <section id="section3" class="section section3">
         <div id="instagram">
@@ -175,6 +176,7 @@
             <p><a href="http://416ansan.com/">4.16안산시민연대</a></p>
             <p><a href="https://416foundation.org/">4.16재단</a></p>
         </div>
+        <p class="pc black-arrow" v-on:click="down"><i class="fas fa-sort-down"></i></p>
         <div class="sns">
             <p><a href="https://www.facebook.com/nextyellow0416/">FACEBOOK</a></p>
             <p><a href="https://www.instagram.com/nextyellow/">INSTAGRAM</a></p>
@@ -182,6 +184,13 @@
             <p>Jellyjang with tnk&mke</p>
         </div>
     </div>
+    </div>
+
+
+    <div v-if="imgtoggle" class="img-modal">
+        <p>이미지를 길게 누르시면 저장할 수 있습니다.</p>
+            <img v-bind:src="'/static/img/모바일1_최종_' + imgindex +'.jpg'">
+        <button @click="initial">Close</button>
     </div>
 </div>
 <!-- 
@@ -214,13 +223,24 @@
         return {
             toggle_flag : false,
             options: {
+                afterLoad: this.afterLoad,
                 navigation: false,
                 // scrollOverflow: true,
                 normalScrollElements: '.dropdown-menu'
-            }
+            },
+            index : 0,
+            message: '',
+            imgindex: 0,
+            imgtoggle: false,
             }
     },
     methods:{
+        initial: function () {
+            this.imgtoggle= false
+            this.toggle_flag = false
+            this.message = ''
+            fullpage_api.setAllowScrolling(true)
+        },
         toggle : function() {
             if (this.toggle_flag == false){
                 fullpage_api.setAllowScrolling(false)
@@ -229,6 +249,30 @@
                 fullpage_api.setAllowScrolling(true)
             }
             this.toggle_flag = !this.toggle_flag
+        },
+        down :function() {
+            fullpage_api.moveSectionDown()
+        },
+        afterLoad: function(origin, destination, direction){
+            console.log("After load....");
+            console.log("this",destination);
+            this.index = destination.index
+        },
+        click: function(e){
+            this.message = e.target.innerText
+            this.imgindex = e.target.attributes.value.value
+            this.toggle_flag = false
+            fullpage_api.setAllowScrolling(true)
+        },
+        send: function() {
+            let vm = this
+            fetch(`/send/${this.message}/`)
+            .then(res => {
+                if (res.status == 200){
+                    vm.imgtoggle = true
+                }
+            })
+            fullpage_api.setAllowScrolling(false)
         }
     }
 })

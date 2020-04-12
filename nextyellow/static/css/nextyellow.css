@@ -140,11 +140,30 @@ html{
 .section2--contents .dropdown .button {
     padding-left: .5em;
     font-size: 2em;
-    color:transparent
+    color:transparent;
+    width: 268.88px;
+    justify-content: space-between;
+}
+.section2--contents .dropdown .button .selected {
+    color:initial
 }
 .section2--contents .dropdown .button .icon:last-child:not(:first-child) {
     margin-top: -.3em;
     color: #f9de6d;
+}
+.dropdown-trigger {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.selected-btn {
+    font-size: 1em;
+    background-color: #f9de6d;
+    padding : .3em 1em;
+    margin-top: .5em;
+}
+.selected-big-font {
+    margin-top: -1.1em;
 }
 
 .section2--contents .dropdown-menu {
@@ -162,12 +181,41 @@ html{
     overflow: scroll;
     height: 12rem;
 }
+.section2--contents .dropdown-content.selected-dropdown {
+    margin-top: -2.2em;
+}
 .section2--contents .dropdown-item {
     font-size: 2rem;
 }
 div.dropdown-item:hover{
     background-color: #f5f5f5;
     color: #0a0a0a;
+}
+
+.img-modal {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-modal p{
+    color: white;
+    text-align: center;
+    width: 60%;
+}
+.img-modal img{
+    width: 60%;
+    margin: 1em 0;
+}
+.img-modal button {
+    border:1px white solid;
+    background-color: transparent;
+    color: white
 }
 
 @media (min-width: 1024px){
@@ -204,7 +252,6 @@ div.dropdown-item:hover{
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-        margin-top: 8em;
         width: 86%;
         max-width: 960px;
         animation: fadein 4s;
@@ -233,11 +280,12 @@ div.dropdown-item:hover{
     }
     .section1--footer a {
         color:#4d4d4d;
+        padding-left: 1em;
     }
     .credit{
         display: flex;
         justify-content: space-between;
-        width: 43%;
+        width: 388px;
     }
     
    .footer-wrap{
@@ -258,6 +306,9 @@ div.dropdown-item:hover{
         padding: 1em;
         font-size: 2em;
         color: #4d4d4d;
+        padding-bottom: 0 !important;
+        padding-left: 0 !important;
+        margin-left: -4em;
     }
 
     .black-arrow:hover svg{
@@ -316,6 +367,11 @@ div.dropdown-item:hover{
     }
     .section2--contents .dropdown-item {
         font-size: 2rem;
+    }
+
+    .img-modal {
+        position: fixed;
+        top: 5em;
     }
 }
 

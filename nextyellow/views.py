@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import HitCount
+from django.http import HttpResponse, JsonResponse
+from .models import HitCount, UserSelect
 from django.utils import timezone
 
 # Create your views here.
@@ -30,3 +31,9 @@ def index(request):
     hitcount = hits.id 
 
     return render(request, 'nextyellow/index.html', { 'hitcount' : hitcount})
+
+
+def select(request, word):
+    new_word = UserSelect.objects.create(selected=word)
+    new_word.save()
+    return JsonResponse({'result' : 'ok'}, json_dumps_params={'ensure_ascii': False})
