@@ -426,26 +426,61 @@ div.dropdown-item:hover{
     .img-modal img{
         width: 30%;
     }
-
-    /******** section3 *********/
     .mobile-text{
         display: none;
     }
     .pc-text{
         display: block;
     }
+
+     /******** section3 *********/
     .mobile-insta{
         display: none;
     }
     .pc-insta{
         display: block;
     }
-    #instagram img {
-        float: left;
-        width: 23%;
-        height: auto;
-        margin: 1%;
+    .section3 {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
+    #instagram img {
+        float: unset;
+        width: 100%;
+        height: 182px;
+        padding: .3em;
+    }
+    #instagram {
+        height: 100vh;
+        display: flex;
+    }
+    #instagram > div {
+        width: 90%;
+        margin: 20px auto;
+    }
+    #instagram h4 {
+        font-size: 2em;
+        text-align: center;
+        font-weight: 700;
+    }
+    #instagram .insta-text{
+        font-size: .875em;
+        text-align: center;
+        margin: 1em;
+    }
+    .VueCarousel{
+        width: 786px;
+        margin: 0 auto;
+    }
+    .VueCarousel-slide{
+        display: flex;
+        flex-direction: column;
+    }
+    .VueCarousel-pagination{
+        display: none;
+    }
+
 }
 
 @keyframes fadein {

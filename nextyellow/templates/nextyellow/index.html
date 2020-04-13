@@ -11,6 +11,7 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-fullpage.js/dist/vue-fullpage.min.js"></script>
+    <script src="https://ssense.github.io/vue-carousel/js/vue-carousel.min.js"></script>
   </head>
   <body>
     <div id="app">
@@ -171,14 +172,37 @@
             <div class="mobile-insta">
                 <img v-for="(item,index) in media" v-bind:key="index" v-bind:src="item['node']['display_url']">
             </div>
-            <div class="pc-insta">
-                <img v-for="(item,index) in media" v-bind:key="index" v-bind:src="item['node']['display_url']">
-            </div>
+            <carousel class="row carousel pc-insta" v-bind:per-page="4" :autoplay='true' :loop='true'>
+                <slide>
+                    <img v-bind:src="media['0']['node']['display_url']">
+                    <img v-bind:src="media['1']['node']['display_url']">
+                </slide>
+                <slide>
+                    <img v-bind:src="media['2']['node']['display_url']">
+                    <img v-bind:src="media['3']['node']['display_url']">
+                </slide>
+                <slide>
+                    <img v-bind:src="media['4']['node']['display_url']">
+                    <img v-bind:src="media['5']['node']['display_url']">
+                </slide>
+                <slide>
+                    <img v-bind:src="media['6']['node']['display_url']">
+                    <img v-bind:src="media['7']['node']['display_url']">
+                </slide>
+                <slide>
+                    <img v-bind:src="media['8']['node']['display_url']">
+                    <img v-bind:src="media['9']['node']['display_url']">
+                </slide>
+                <slide>
+                    <img v-bind:src="media['10']['node']['display_url']">
+                    <img v-bind:src="media['11']['node']['display_url']">
+                </slide>
+            </carousel>
             <h4>#nextyellow</h4>
             <div class="insta-text">
                 <p>일상의 모든 노랑 사진을 인스타그램에 태그하여 공유해주세요.</p>
                 <p>봄이 지나도, 만나지 않고도 우리는 마음을 모을 수 있습니다.</p>
-                <p>더 많은 노랑이 공유될 수록</p>
+                <p>더 많은 노랑이 공유될수록</p>
                 <p>노랑은 슬픔 넘어 긍정의 상징이 됩니다. </p>
             </div>
         </div>
@@ -210,11 +234,14 @@
     </div>
 </div>
 
-
 <script>
-    var vm =new Vue({
+var vm =new Vue({
     el: '#app',
     delimiters: ['${', '}'],
+    components: {
+  	'carousel': VueCarousel.Carousel,
+    'slide': VueCarousel.Slide
+    },
     data() {
         return {
             toggle_flag : false,
