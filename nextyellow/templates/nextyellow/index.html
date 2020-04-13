@@ -168,7 +168,10 @@
     </section>
     <section id="section3" class="section section3">
         <div id="instagram">
-            <div>
+            <div class="mobile-insta">
+                <img v-for="(item,index) in media" v-bind:key="index" v-bind:src="item['node']['display_url']">
+            </div>
+            <div class="pc-insta">
                 <img v-for="(item,index) in media" v-bind:key="index" v-bind:src="item['node']['display_url']">
             </div>
             <h4>#nextyellow</h4>
@@ -279,17 +282,6 @@
                 const media = JSON.parse(a.slice(a.indexOf("edge_owner_to_timeline_media") + 30, a.indexOf("edge_saved_media") - 2));
                 console.log(media)
                 this.media = media.edges
-                // media.edges.forEach(m => {
-                //     const node = m.node,
-                //         a = document.createElement("div"),
-                //         img = document.createElement("img");
-                    
-                //     // a.target="_blank",
-                //     // a.href = `https://www.instagram.com/p/${node.shortcode}/`,
-                //     img.src = node.display_url,
-                //     a.append(img),
-                //     wrapper.append(a)
-                // })
         })
         }
     }

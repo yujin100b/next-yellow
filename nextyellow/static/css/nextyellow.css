@@ -248,6 +248,9 @@ div.dropdown-item:hover{
     text-align: center;
     padding-bottom: 3em;
 }
+.pc-insta{
+    display: none;
+}
 @media (min-width: 1024px){
     .header-wrap{
         display: flex;
@@ -423,11 +426,25 @@ div.dropdown-item:hover{
     .img-modal img{
         width: 30%;
     }
+
+    /******** section3 *********/
     .mobile-text{
         display: none;
     }
     .pc-text{
         display: block;
+    }
+    .mobile-insta{
+        display: none;
+    }
+    .pc-insta{
+        display: block;
+    }
+    #instagram img {
+        float: left;
+        width: 23%;
+        height: auto;
+        margin: 1%;
     }
 }
 
