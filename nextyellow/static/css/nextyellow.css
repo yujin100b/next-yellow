@@ -171,7 +171,9 @@ html{
 .selected-big-font {
     margin-top: -1.1em;
 }
-
+.opacityhalf{
+    opacity: .5;
+}
 .section2--contents .dropdown-menu {
     display: block;
     left: 0;

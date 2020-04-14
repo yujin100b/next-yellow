@@ -57,7 +57,7 @@
             <div>
                 <div class="select-main-wrap">
                     <div class="big-font">
-                        <p>슬픔 넘어</p>
+                        <p v-bind:class="toggle_flag == true ? 'opacityhalf' : ''" >슬픔 넘어</p>
                     </div>
                     <div>
                         <div class="dropdown" v-bind:class="message != '' ? 'selected-dropdown-desktop' : ''">
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                     <div class="big-font" v-bind:class="message != '' ? 'selected-big-font' : ''">
-                        <p>노랑</p>
+                        <p v-bind:class="toggle_flag == true ? 'opacityhalf' : ''" >노랑</p>
                     </div>
                 </div>
                 <div v-show="index == 1"  class="select-helper-wrap">
