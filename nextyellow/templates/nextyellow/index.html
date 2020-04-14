@@ -53,7 +53,7 @@
     </section>
     <section id="section2" class="section section2" >
 
-        <div v-show="index == 1" class="section2--contents">
+        <div class="section2--contents">
             <div>
                 <div class="select-main-wrap">
                     <div class="big-font">
@@ -156,7 +156,7 @@
                         <p>노랑</p>
                     </div>
                 </div>
-                <div class="select-helper-wrap">
+                <div v-show="index == 1"  class="select-helper-wrap">
                 <div class="select-helper">
                     <p>당신은 슬픔 넘어 어떤 노랑을 바라는지 궁금합니다.</p>
                     <p>빈 칸에 당신이 바라는 긍정의 노랑을 골라주세요</p>
@@ -198,8 +198,8 @@
                     <img v-bind:src="media['11']['node']['display_url']">
                 </slide>
             </carousel>
-            <h4>#nextyellow</h4>
-            <div class="insta-text">
+            <h4 v-show="index == 2"  class="insta-title">#nextyellow</h4>
+            <div v-show="index == 2" class="insta-text">
                 <p>일상의 모든 노랑 사진을 인스타그램에 태그하여 공유해주세요.</p>
                 <p>봄이 지나도, 만나지 않고도 우리는 마음을 모을 수 있습니다.</p>
                 <p>더 많은 노랑이 공유될수록</p>

@@ -7,6 +7,7 @@ html{
     scroll-behavior: smooth;
 }
 .fadein {
+    display: block;
     animation: fadein 4s;
     -moz-animation: fadein 4s; /* Firefox */
     -webkit-animation: fadein 4s; /* Safari and Chrome */
@@ -129,6 +130,10 @@ html{
 }
 .section2--contents .select-helper{
     font-size: .7em;
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
 }
 .section2--contents .select-helper p:nth-child(1){
     padding-top:1em;
@@ -150,6 +155,7 @@ html{
 .section2--contents .dropdown .button .icon:last-child:not(:first-child) {
     margin-top: -.3em;
     color: #f9de6d;
+    animation: blink 1s linear infinite;
 }
 .dropdown-trigger {
     display: flex;
@@ -236,6 +242,10 @@ div.dropdown-item:hover{
     font-size: 2em;
     text-align: center;
     font-weight: 700;
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
 }
 #instagram img{
     float: left;
@@ -247,6 +257,10 @@ div.dropdown-item:hover{
     font-size: .7em;
     text-align: center;
     padding-bottom: 3em;
+    animation: fadein 4s;
+    -moz-animation: fadein 4s; /* Firefox */
+    -webkit-animation: fadein 4s; /* Safari and Chrome */
+    -o-animation: fadein 4s; /* Opera */
 }
 .pc-insta{
     display: none;
@@ -342,6 +356,7 @@ div.dropdown-item:hover{
         padding-bottom: 0 !important;
         padding-left: 0 !important;
         margin-left: -4em;
+        animation: blink 1s linear infinite;
     }
 
     .black-arrow:hover svg{
@@ -382,6 +397,10 @@ div.dropdown-item:hover{
         display: flex;
         justify-content: center;
         align-items: center;
+        animation: fadein 4s;
+        -moz-animation: fadein 4s; /* Firefox */
+        -webkit-animation: fadein 4s; /* Safari and Chrome */
+        -o-animation: fadein 4s; /* Opera */
 
     }
     .section2--contents .select-helper{
@@ -448,7 +467,7 @@ div.dropdown-item:hover{
     #instagram img {
         float: unset;
         width: 100%;
-        height: 182px;
+        height: 196.5px;
         padding: .3em;
     }
     #instagram {
@@ -515,3 +534,9 @@ div.dropdown-item:hover{
         opacity: 1;
     }
 }
+
+@keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
