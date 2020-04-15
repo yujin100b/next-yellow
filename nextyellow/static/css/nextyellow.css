@@ -318,6 +318,7 @@ div.dropdown-item:hover{
     }
     .section1--contents .hitcount p{
         font-size: 1.7em;
+        font-weight: bold;
     }
     .section1--footer{
         align-items: flex-end;

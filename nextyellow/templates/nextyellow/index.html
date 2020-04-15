@@ -17,7 +17,7 @@
     <div id="app">
         <div class="header-wrap">
             <div class="container header">
-                <img class="logo" src="{% static 'img/nextyellow.png' %}">
+                <img @click="uptofirst" class="logo" src="{% static 'img/nextyellow.png' %}">
                 <h1 class="title">
                 여섯 번째 봄
                 </h1>
@@ -279,6 +279,9 @@ var vm =new Vue({
         },
         down :function() {
             fullpage_api.moveSectionDown()
+        },
+        uptofirst: function() {
+            fullpage_api.moveTo(1)
         },
         afterLoad: function(origin, destination, direction){
             console.log("After load....");
