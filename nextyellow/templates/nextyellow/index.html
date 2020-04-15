@@ -213,7 +213,8 @@
     </section>
     </full-page>
     <div class="footer-wrap">
-        <p class="mobile black-arrow-add" v-on:click="down"><i class="fas fa-sort-down"></i></p>
+        <p v-show="index == 2" class="mobile black-arrow-add" v-on:click="up"><i class="fas fa-sort-up"></i></p>
+        <p v-if="index == 0 || index == 1" class="mobile black-arrow-add" v-on:click="down"><i class="fas fa-sort-down"></i></p>
     <div class="container section1--footer">
         <div class="credit">
             <p><a target="_blank" href="http://416family.org/">4.16세월호참사가족협의회</a></p>
