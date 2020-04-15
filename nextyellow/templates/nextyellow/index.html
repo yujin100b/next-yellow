@@ -52,9 +52,9 @@
 
     </section>
     <section id="section2" class="section section2" >
-
         <div class="section2--contents">
             <div>
+                <div  v-if="toggle_flag" class="overlay" @click="toggle"></div>
                 <div class="select-main-wrap">
                     <div class="big-font">
                         <p v-bind:class="toggle_flag == true ? 'opacityhalf' : ''" >슬픔 넘어</p>

@@ -6,6 +6,16 @@
 html{
     scroll-behavior: smooth;
 }
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 19;
+}
+
 .fadein {
     display: block;
     animation: fadein 4s;
@@ -187,7 +197,7 @@ html{
     border-radius: 0;
     padding-top: 0;
     overflow: scroll;
-    height: 12rem;
+    height: 13rem;
 }
 .section2--contents .dropdown-content.selected-dropdown {
     margin-top: -2.2em;
@@ -429,7 +439,7 @@ div.dropdown-item:hover{
     .section2--contents .dropdown-menu {
         display: block;
         left: 0;
-        min-width: 12rem;
+        min-width: 13rem;
         padding-top: 4px;
         position: absolute;
         top: 100%;
