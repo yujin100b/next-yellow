@@ -167,9 +167,9 @@ html{
 
 .section2--contents .dropdown .button {
     padding-left: .5em;
-    font-size: 2em;
+    font-size: 1.5em;
     color:transparent;
-    width: 268.88px;
+    width: 222.88px;
     justify-content: space-between;
 }
 .section2--contents .dropdown .button .selected {
@@ -210,13 +210,13 @@ html{
     border-radius: 0;
     padding-top: 0;
     overflow: scroll;
-    height: 13rem;
+    height: 12rem;
 }
 .section2--contents .dropdown-content.selected-dropdown {
     margin-top: -2.2em;
 }
 .section2--contents .dropdown-item {
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 div.dropdown-item:hover{
     background-color: #f5f5f5;
@@ -451,6 +451,7 @@ div.dropdown-item:hover{
 
     .section2--contents .dropdown .button {
         padding-left: .5em;
+        width:268.88px;
         font-size: 2em;
     }
     .selected-dropdown-desktop {
