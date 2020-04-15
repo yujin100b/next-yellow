@@ -15,7 +15,9 @@
   </head>
   <body>
     <div id="app">
+
         <div class="header-wrap">
+            <p v-if="index==2" class="pc header-arrow" v-on:click="up"><i class="fas fa-sort-up"></i></p>
             <div class="container header">
                 <img @click="uptofirst" class="logo" src="{% static 'img/nextyellow.png' %}">
                 <h1 class="title">
@@ -172,7 +174,7 @@
             <div class="mobile-insta">
                 <img v-for="(item,index) in media" v-bind:key="index" v-bind:src="item['node']['display_url']">
             </div>
-            <carousel class="row carousel pc-insta" v-bind:per-page="4" :autoplay='true' :loop='true'>
+            <carousel class="row carousel pc-insta" v-bind:per-page="5" :autoplay='true' :loop='true'>
                 <slide>
                     <img v-bind:src="media['0']['node']['display_url']">
                     <img v-bind:src="media['1']['node']['display_url']">
@@ -198,6 +200,7 @@
                     <img v-bind:src="media['11']['node']['display_url']">
                 </slide>
             </carousel>
+            <div class="section3--text">
             <h4 v-show="index == 2"  class="insta-title">#nextyellow</h4>
             <div v-show="index == 2" class="insta-text">
                 <p>일상의 모든 노랑 사진을 인스타그램에 태그하여 공유해주세요.</p>
@@ -205,17 +208,19 @@
                 <p>더 많은 노랑이 공유될수록</p>
                 <p>노랑은 슬픔 넘어 긍정의 상징이 됩니다. </p>
             </div>
+            </div>
         </div>
     </section>
     </full-page>
     <div class="footer-wrap">
+        <p class="mobile black-arrow-add" v-on:click="down"><i class="fas fa-sort-down"></i></p>
     <div class="container section1--footer">
         <div class="credit">
             <p><a target="_blank" href="http://416family.org/">4.16세월호참사가족협의회</a></p>
             <p><a target="_blank" href="http://416ansan.com/">4.16안산시민연대</a></p>
             <p><a target="_blank" href="https://416foundation.org/">4.16재단</a></p>
         </div>
-        <p class="pc black-arrow" v-on:click="down"><i class="fas fa-sort-down"></i></p>
+        <p v-if="index == 0 || index == 1" class="pc black-arrow" v-on:click="down"><i class="fas fa-sort-down"></i></p>
         <div class="sns">
             <p><a target="_blank" href="https://www.facebook.com/nextyellow0416/">FACEBOOK</a></p>
             <p><a target="_blank" href="https://www.instagram.com/nextyellow/">INSTAGRAM</a></p>
@@ -276,6 +281,9 @@ var vm =new Vue({
                 fullpage_api.setAllowScrolling(true)
             }
             this.toggle_flag = !this.toggle_flag
+        },
+        up :function() {
+            fullpage_api.moveSectionUp()
         },
         down :function() {
             fullpage_api.moveSectionDown()
